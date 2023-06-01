@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sleep 15 
+mongosh --host mongo1:27017 config-source.js 
+sleep 15 
+cx /topics/source.json 
+sleep 5 
+cx /topics/sink.json
+status
